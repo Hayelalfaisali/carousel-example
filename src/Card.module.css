@@ -1,0 +1,52 @@
+.cardContainer {
+  perspective: 1000px; /* Enable 3D space for the flip effect */
+}
+
+.card {
+  width: 16rem;
+  height: 500px;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s;
+  transform-style: preserve-3d; /* Enable 3D effect */
+}
+
+.cardSide {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden; /* Hide the back face when not flipped */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem 2rem 2rem;
+  background-color: white; /* Same background for both sides */
+}
+
+.cardSide:nth-child(2) {
+  transform: rotateY(180deg); /* Rotate the back side */
+}
+
+.cardImage {
+  margin-top: -20%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card h2 {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.card p {
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card .btnn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
